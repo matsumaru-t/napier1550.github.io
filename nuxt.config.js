@@ -1,3 +1,8 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/napier1550.github.io/'
+  }
+} : {}
 
 export default {
   mode: 'universal',
@@ -48,8 +53,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  },
-  router: {
-    base: '/napier1550.github.io/'
   }
 }
